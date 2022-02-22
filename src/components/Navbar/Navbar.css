@@ -1,0 +1,113 @@
+.palmtree--nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 99;
+}
+
+.palmtree--navbar{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: .4rem;
+  background-color: #1d1d1d;
+  margin: 0;
+}
+
+.palmtree--nav-logo{
+  display: flex;
+  justify-self: flex-start;
+  color: #ddd;
+  font-size: 1.5rem;
+  flex: 1 1 50%;
+}
+
+.palmtree--nav-logo a{
+  color: #ddd;
+  text-decoration: none;
+}
+
+.palmtree--nav-links{
+  position: absolute;
+  top: -400%;
+  left: 0;
+  width: 100%;
+  padding: .5rem;
+  font-size: 1.1rem;
+  background-color: #1d1d1d;
+  z-index: -1;
+  transition: top 500ms ease-in-out 0s;
+}
+
+.palmtree--nav-links a{
+  color: #ddd;
+  display: block;
+  padding: .8rem;
+  text-decoration: none;
+}
+
+.palmtree--nav-links a:hover{
+  cursor: pointer;
+  color: #ada;
+}
+
+.palmtree--mobile-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.palmtree--mobile-menu span{
+  height: 10px;
+  font-size: 2rem;
+  display: block;
+  background-color: #ddd;
+  padding: .1rem;
+  margin: .1rem;
+  width: 40px;
+  border-radius: 3px;
+  transition: all 200ms ease-in 100ms;
+}
+
+.palmtree--mobile-menu:hover span{
+  background-color: #ada;
+}
+
+.palmtree--toggle-nav{
+  top: 100%;
+}
+
+.palmtree--animate-menu span:first-child{
+  transform: translateY(14px) rotate(45deg) 
+}
+
+.palmtree--animate-menu span:nth-child(2){
+  transform: scale(0);
+}
+
+.palmtree--animate-menu span:last-child{
+    transform: translateY(-19px) rotate(-45deg);
+}
+
+@media screen and (min-width: 768px){
+  .palmtree--nav-links{
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 1 50%;
+    z-index: 0;
+    background-color: transparent;
+  }
+
+  .palmtree--nav-links a{
+    padding: .4rem .7rem;
+  }
+
+  .palmtree--mobile-menu{
+    display: none;
+  }
+}
