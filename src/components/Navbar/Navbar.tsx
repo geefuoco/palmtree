@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CustomClass } from "../../interfaces/customClass";
 import "./Navbar.css";
 
 interface Link {
@@ -17,17 +18,16 @@ interface ImageLogo extends Logo {
   height: number;
 }
 
-export interface Props {
+export interface Props extends CustomClass {
   logo?: Logo | ImageLogo;
   links: Link[];
-  customClasses?: string;
 }
 
 const isImageLogo = (logo: object): logo is ImageLogo => {
   return "alt" in logo;
 };
 
-const Navbar: React.FC<Props> = ({ logo, links, customClasses }) => {
+const Navbar: React.FC<Props> = ({ logo, links, customClass }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const navLinkClass = `palmtree--nav-links ${
@@ -72,7 +72,7 @@ const Navbar: React.FC<Props> = ({ logo, links, customClasses }) => {
 
   return (
     <nav className="palmtree--nav">
-      <div className={`palmtree--navbar ${customClasses || ""}`}>
+      <div className={`palmtree--navbar ${customClass || ""}`}>
         {logo ? (
           <div className="palmtree--nav-logo">{logoElement()}</div>
         ) : null}
