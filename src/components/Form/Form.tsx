@@ -18,6 +18,7 @@ const Form: React.FC<Props> = ({
   inputObjects,
   submitText,
   title,
+  children,
   onSubmit
 }) => {
   const formData = inputObjects
@@ -41,6 +42,7 @@ const Form: React.FC<Props> = ({
     >
       <h3 className="palmtree--form-title">{title}</h3>
       {formData}
+      {children}
       <button
         type="submit"
         aria-label="submit"

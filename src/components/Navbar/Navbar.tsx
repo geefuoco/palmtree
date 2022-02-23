@@ -20,14 +20,14 @@ interface ImageLogo extends Logo {
 
 export interface Props extends CustomClass {
   logo?: Logo | ImageLogo;
-  links: Link[];
+  links?: Link[];
 }
 
 const isImageLogo = (logo: object): logo is ImageLogo => {
   return "alt" in logo;
 };
 
-const Navbar: React.FC<Props> = ({ logo, links, customClass }) => {
+const Navbar: React.FC<Props> = ({ logo, links, customClass, children }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const navLinkClass = `palmtree--nav-links ${
@@ -37,13 +37,15 @@ const Navbar: React.FC<Props> = ({ logo, links, customClass }) => {
     isOpen ? "palmtree--animate-menu" : ""
   }`;
 
-  const linkElements = links.map((obj) => {
-    return (
-      <a href={obj.url} className="palmtree--nav-link" key={obj.url}>
-        {obj.text}
-      </a>
-    );
-  });
+  const linkElements =
+    links &&
+    links.map((obj) => {
+      return (
+        <a href={obj.url} className="palmtree--nav-link" key={obj.url}>
+          {obj.text}
+        </a>
+      );
+    });
 
   const logoElement = (): JSX.Element | null => {
     let element: JSX.Element | null = null;
@@ -76,7 +78,10 @@ const Navbar: React.FC<Props> = ({ logo, links, customClass }) => {
         {logo ? (
           <div className="palmtree--nav-logo">{logoElement()}</div>
         ) : null}
-        <div className={navLinkClass}>{linkElements}</div>
+        <div className={navLinkClass}>
+          {linkElements}
+          {children}
+        </div>
         <div className={menuClass} onClick={() => setIsOpen(!isOpen)}>
           <span></span>
           <span></span>
