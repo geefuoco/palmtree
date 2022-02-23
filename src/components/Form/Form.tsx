@@ -36,7 +36,11 @@ const Form: React.FC<Props> = ({
     >
       <h3 className="palmtree--form-title">{title}</h3>
       {formData}
-      <button type="submit" className="palmtree--form-submit">
+      <button
+        type="submit"
+        aria-label="submit"
+        className="palmtree--form-submit"
+      >
         {submitText}
       </button>
     </form>

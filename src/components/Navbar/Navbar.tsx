@@ -71,7 +71,7 @@ const Navbar: React.FC<Props> = ({ logo, links, customClass }) => {
   };
 
   return (
-    <nav className="palmtree--nav">
+    <nav className="palmtree--nav" role="navigation" aria-label="navbar">
       <div className={`palmtree--navbar ${customClass || ""}`}>
         {logo ? (
           <div className="palmtree--nav-logo">{logoElement()}</div>

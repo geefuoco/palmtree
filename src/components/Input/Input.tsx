@@ -6,6 +6,7 @@ export interface Props extends CustomClass {
   name: string;
   type: string;
   required: boolean;
+  placeholder?: string;
   showPasswordButton?: boolean;
   onChange?: Dispatch<SetStateAction<unknown>>;
 }
@@ -16,7 +17,8 @@ const Input: React.FC<Props> = ({
   required,
   onChange,
   customClass,
-  showPasswordButton
+  showPasswordButton,
+  placeholder
 }) => {
   const [isPasswordShowing, setIsPasswordShowing] = useState<boolean>(false);
 
@@ -34,8 +36,10 @@ const Input: React.FC<Props> = ({
   return (
     <div className="palmtree--input-element">
       <input
+        aria-label={name}
         name={name}
         id={name}
+        placeholder={placeholder || ""}
         type={isPasswordShowing ? "text" : type}
         required={required}
         onChange={onChange}
