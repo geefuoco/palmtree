@@ -1,0 +1,29 @@
+.palmtree--input{
+  position: relative;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 .3rem black;
+  font-size: 1.2rem;
+  padding: .2rem;
+  transition: 300ms;
+}
+
+.palmtree--input:focus{
+  box-shadow: 0 0 .3rem lightblue;
+}
+
+.palmtree--input-show-button{
+  position: relative;
+  top: -2px;
+  right: 46px;
+  padding: 4px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px grey;
+  font-size: .8rem;
+  font-weight: 700;
+  transition: 300ms;
+}
+
+.palmtree--input-show-button:hover{
+  background-color: #ccc;
+}
