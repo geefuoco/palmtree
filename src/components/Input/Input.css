@@ -5,7 +5,13 @@
   box-shadow: 0 0 .3rem black;
   font-size: 1.2rem;
   padding: .2rem;
+  flex: 1 1 50%;
   transition: 300ms;
+}
+
+.palmtree--input-element{
+  width: 100%;
+  display: flex;
 }
 
 .palmtree--input:focus{
@@ -14,7 +20,7 @@
 
 .palmtree--input-show-button{
   position: relative;
-  top: -2px;
+  top: 0;
   right: 46px;
   padding: 4px;
   border-radius: 10px;

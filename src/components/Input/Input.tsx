@@ -23,6 +23,7 @@ const Input: React.FC<Props> = ({
   const showPassword =
     type === "password" && showPasswordButton ? (
       <button
+        type="button"
         className="palmtree--input-show-button"
         onClick={() => setIsPasswordShowing(!isPasswordShowing)}
       >
@@ -31,7 +32,7 @@ const Input: React.FC<Props> = ({
     ) : null;
 
   return (
-    <>
+    <div className="palmtree--input-element">
       <input
         name={name}
         id={name}
@@ -42,7 +43,7 @@ const Input: React.FC<Props> = ({
         data-testid="palmtree--input"
       />
       {showPassword}
-    </>
+    </div>
   );
 };
 
