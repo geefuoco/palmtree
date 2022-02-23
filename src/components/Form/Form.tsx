@@ -8,6 +8,7 @@ export interface Props extends CustomClass {
   method: string;
   inputObjects?: { name: string; element: JSX.Element }[];
   submitText: string;
+  onSubmit?: React.FormEventHandler<HTMLFormElement>;
 }
 
 const Form: React.FC<Props> = ({
@@ -16,7 +17,8 @@ const Form: React.FC<Props> = ({
   customClass,
   inputObjects,
   submitText,
-  title
+  title,
+  onSubmit
 }) => {
   const formData = inputObjects
     ? inputObjects.map((io) => {
@@ -31,6 +33,7 @@ const Form: React.FC<Props> = ({
 
   return (
     <form
+      onSubmit={onSubmit}
       aria-label="form"
       action={action}
       method={method}
