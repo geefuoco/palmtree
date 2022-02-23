@@ -6,7 +6,7 @@ export interface Props extends CustomClass {
   title: string;
   action: string;
   method: string;
-  inputObjects: { name: string; element: JSX.Element }[];
+  inputObjects?: { name: string; element: JSX.Element }[];
   submitText: string;
 }
 
@@ -18,14 +18,16 @@ const Form: React.FC<Props> = ({
   submitText,
   title
 }) => {
-  const formData = inputObjects.map((io) => {
-    return (
-      <div className="palmtree--form-item" key={io.name}>
-        <label htmlFor={io.name}>{io.name}</label>
-        {io.element}
-      </div>
-    );
-  });
+  const formData = inputObjects
+    ? inputObjects.map((io) => {
+        return (
+          <div className="palmtree--form-item" key={io.name}>
+            <label htmlFor={io.name}>{io.name}</label>
+            {io.element}
+          </div>
+        );
+      })
+    : null;
 
   return (
     <form
