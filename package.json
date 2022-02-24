@@ -9,7 +9,7 @@
     "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "eslint src --ext .ts --fix",
     "rollup": "rollup -c",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook --no-open -p 6006",
     "build-storybook": "build-storybook"
   },
   "keywords": [],
