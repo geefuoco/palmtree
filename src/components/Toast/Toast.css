@@ -1,0 +1,53 @@
+.palmtree--toast{
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1rem;
+  width: 250px;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  background-color: lightblue;
+  color: #1d1d1d;
+  animation-name: popup;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.palmtree--close-menu{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.palmtree--close-menu span{
+  padding: .1rem;
+  height: 1px;
+  width: 15px;
+  background-color: #1d1d1d;
+  transition: 300ms ease-in-out;
+}
+
+.palmtree--close-menu:hover span{
+  background-color: lightgreen;
+}
+
+.palmtree--close-menu span:first-child{
+  transform: translate(18px) rotate(45deg);
+}
+
+.palmtree--close-menu span:last-child{
+  transform:translate(0px) rotate(-45deg);
+}
+
+@keyframes popup{
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
