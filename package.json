@@ -31,6 +31,8 @@
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "@testing-library/react": "^12.1.3",
+    "@types/babel__core": "^7.1.18",
+    "@types/babel__preset-env": "^7.9.2",
     "@types/jest": "^27.4.0",
     "@types/prettier": "^2.4.4",
     "@types/react": "^17.0.39",
@@ -42,6 +44,7 @@
     "jest": "^27.5.1",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
+    "regenerator-runtime": "^0.13.9",
     "rollup": "^2.67.3",
     "rollup-plugin-dts": "^4.1.0",
     "rollup-plugin-postcss": "^4.0.2",
@@ -51,6 +54,5 @@
   "files": [
     "build"
   ],
-  "types": "build/index.d.ts",
-  "dependencies": {}
+  "types": "build/index.d.ts"
 }
