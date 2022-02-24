@@ -10,7 +10,8 @@
     "lint": "eslint src --ext .ts --fix",
     "rollup": "rollup -c",
     "storybook": "start-storybook --no-open -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "create-story": " src/util/createStory.sh"
   },
   "keywords": [],
   "author": "Gianluca Fuoco",
