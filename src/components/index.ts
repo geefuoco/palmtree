@@ -5,3 +5,4 @@ export { default as Form } from "./Form";
 export { default as Image } from "./Image";
 export { default as Container } from "./Container";
 export { default as Toast } from "./Toast";
+export { default as Tooltip } from "./Tooltip";

@@ -1,0 +1,12 @@
+.palmtree--tooltip{
+  box-sizing: border-box;
+  padding: 1rem;
+  position: fixed;
+  min-width: 90px;
+  max-width: 200px;
+  transform: translateX(-50%);
+  background-color: #1d1d1d;
+  color: #dddddd;
+  font-size: 1rem;
+  z-index: 3;
+}
