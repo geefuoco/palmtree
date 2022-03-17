@@ -1,5 +1,5 @@
 {
-  "name": "palmtree",
+  "name": "@geefuoco/palmtree",
   "version": "0.0.1",
   "description": "A react component library",
   "main": "build/cjs/index.js",
