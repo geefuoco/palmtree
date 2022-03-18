@@ -28,3 +28,9 @@ Default.args = {
     }
   ]
 };
+
+export const Long = Template.bind({});
+Long.args = {
+  logo: { content: "ASuperLongLogo", url: "/" },
+  links: [{ text: "About", url: "/about" }]
+};
