@@ -5,11 +5,15 @@
   right: 0;
   margin: auto;
   padding: 1rem;
-  width: 250px;
+  max-width: 500px;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   border-radius: 12px;
   font-size: 1.4rem;
   background-color: lightblue;
   color: #1d1d1d;
+  box-sizing: border-box;
   animation-name: popup;
   animation-duration: 300ms;
   animation-timing-function: ease-in;
@@ -18,7 +22,14 @@
 
 .palmtree--close-menu{
   display: flex;
-  justify-content: flex-end;
+  position: relative;
+  top: 5%;
+  left: 92%;
+}
+
+.palmtree--toast-text{
+  padding: 0rem 1rem;
+  margin: .5rem;
 }
 
 .palmtree--close-menu span{
@@ -27,6 +38,18 @@
   width: 15px;
   background-color: #1d1d1d;
   transition: 300ms ease-in-out;
+}
+
+.palmtree--danger{
+  background-color: lightcoral;
+}
+
+.palmtree--warning{
+  background-color: lightgoldenrodyellow;
+}
+
+.palmtree--close-menu span:hover{
+  cursor: pointer;
 }
 
 .palmtree--close-menu:hover span{
