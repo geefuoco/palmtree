@@ -18,6 +18,26 @@
   animation-duration: 300ms;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
+
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+
+}
+
+.palmtree--toast::-webkit-scrollbar{
+  width: 12px;
+}
+
+.palmtree--toast::-webkit-scrollbar-track{
+  background-color: transparent;
+  border: 3px solid transparent;
+}
+
+.palmtree--toast::-webkit-scrollbar-thumb{
+  border: 4px solid transparent;
+  border-radius: 20px;
+  background-color: black;
+  background-clip: padding-box;
 }
 
 .palmtree--close-menu{
