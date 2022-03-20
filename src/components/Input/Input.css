@@ -1,17 +1,17 @@
 .palmtree--input{
-  position: relative;
   outline: none;
   border: none;
+  border-radius: 8px;
   box-shadow: 0 0 .3rem black;
   font-size: 1.2rem;
-  padding: .2rem;
+  padding: .4rem;
   flex: 1 1 50%;
   transition: 300ms;
 }
 
 .palmtree--input-element{
-  width: 100%;
   display: flex;
+  position: relative;
 }
 
 .palmtree--input:focus{
@@ -19,9 +19,10 @@
 }
 
 .palmtree--input-show-button{
-  position: relative;
-  top: 0;
-  right: 46px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 4px;
+  right: 5px;
   padding: 4px;
   border-radius: 10px;
   box-shadow: 0 1px 2px grey;
@@ -31,5 +32,6 @@
 }
 
 .palmtree--input-show-button:hover{
+  cursor: pointer;
   background-color: #ccc;
 }

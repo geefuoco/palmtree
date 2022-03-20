@@ -20,7 +20,14 @@ Default.args = {
   inputObjects: [
     {
       name: "Email",
-      element: <input type="email" placeholder="Enter your email" />
+      element: (
+        <Input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required={true}
+        />
+      )
     },
     {
       name: "Password",
